@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name="Z_SAPTRX_EH_TRKID")
+@Table(name="nestle.dev.glb.sc.data.table::OCEANTRACKER.Saptrx_eh_trkid")
 @NamedQuery(name="SaptrxEhTrkid.findAll", query="SELECT s FROM SaptrxEhTrkid s")
 public class SaptrxEhTrkid implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -53,6 +53,7 @@ public class SaptrxEhTrkid implements Serializable {
 	@Column(name="URL")
 	private String url;
 	
+	@Transient
 	private String addUpdateFlag;
 
 	public SaptrxEhTrkid() {

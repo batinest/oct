@@ -58,7 +58,9 @@ public class LocalEntityManagerFactory implements ServletContextListener {
     	 // For Cloud 
          try {
              InitialContext ctx = new InitialContext();
-             ds = (DataSource) ctx.lookup("java:comp/env/jdbc/DefaultDB");
+          
+             // TODO put it in constant file
+             ds = (DataSource) ctx.lookup("java:comp/env/S0014062182");
 
              Map properties = new HashMap();
              properties.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, ds);

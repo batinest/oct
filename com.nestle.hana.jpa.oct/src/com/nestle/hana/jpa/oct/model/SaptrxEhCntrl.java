@@ -10,36 +10,37 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="Z_SAPTRX_EH_CNTRL")
+@Table(name="nestle.dev.glb.sc.data.table::OCEANTRACKER.Saptrx_eh_cntrl")
 @NamedQuery(name="SaptrxEhCntrl.findAll", query="SELECT s FROM SaptrxEhCntrl s")
 public class SaptrxEhCntrl implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@Column(name="EH_GUID")
+	@Column(name="\"eh_guid\"")
 	private String ehGuid;
 
-	@Column(name="LANGUAGE")
+	@Column(name="\"language")
 	private String language;
 
-	@Column(name="PARAM_INDEX")
+	@Column(name="\"param_index\"")
 	private int paramIndex;
 
-	@Column(name="PARAM_LENGTH")
+	@Column(name="\"param_length\"")
 	private int paramLength;
 
-	@Column(name="PARAM_NAME")
+	@Column(name="\"param_name\"")
 	private String paramName;
 
-	@Column(name="PARAM_TYPE")
+	@Column(name="\"param_type\"")
 	private String paramType;
 
-	@Column(name="PARAM_VALUE")
+	@Column(name="\"param_value\"")
 	private String paramValue;
 
-	@Column(name="SEQ_NBR")
+	@Column(name="\"seq_nbr\"")
 	private int seqNbr;
 	
+	@Transient
 	private String addupdateFlag;
 
 	public SaptrxEhCntrl() {

@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name="Z_SAPTRX_EH_HDR")
+@Table(name="nestle.dev.glb.sc.data.table::OCEANTRACKER.Saptrx_eh_hdr")
 @NamedQuery(name="SaptrxEhHdr.findAll", query="SELECT s FROM SaptrxEhHdr s")
 public class SaptrxEhHdr implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -184,6 +184,7 @@ public class SaptrxEhHdr implements Serializable {
 	@XmlJavaTypeAdapter(TimestampAdapter.class)
 	private Timestamp updatedDate;
 	
+	@Transient
 	private String addUpdateFlag;
 
 	public SaptrxEhHdr() {

@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.bind.annotation.XmlAccessType; 
 import javax.xml.bind.annotation.XmlAccessorType;
+
 import java.sql.Timestamp;
 import java.util.Date;
 
@@ -18,7 +19,7 @@ import java.util.Date;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name="Z_SAPTRX_EVM_HDR")
+@Table(name="nestle.dev.glb.sc.data.table::OCEANTRACKER.Saptrx_evm_hdr")
 @NamedQuery(name="SaptrxEvmHdr.findAll", query="SELECT s FROM SaptrxEvmHdr s")
 public class SaptrxEvmHdr implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -258,6 +259,7 @@ public class SaptrxEvmHdr implements Serializable {
 	@Column(name="VERSION")
 	private int version;
 	
+	@Transient
 	private String addUpdateFlag;
 	
 	public SaptrxEvmHdr() {

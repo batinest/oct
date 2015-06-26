@@ -1,6 +1,7 @@
 package com.nestle.hana.jpa.oct.model;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -9,7 +10,7 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@Table(name="Z_SAPTRX_EH_INFO")
+@Table(name="nestle.dev.glb.sc.data.table::OCEANTRACKER.Saptrx_eh_info")
 @NamedQuery(name="SaptrxEhInfo.findAll", query="SELECT s FROM SaptrxEhInfo s")
 public class SaptrxEhInfo implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -39,6 +40,7 @@ public class SaptrxEhInfo implements Serializable {
 	@Column(name="SEQ_NBR")
 	private int seqNbr;
 	
+	@Transient
 	private String addUpdateFlag;
 
 	public SaptrxEhInfo() {

@@ -4,7 +4,6 @@ Inc.//DTD Web Application 2.3//EN"
 "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
 
 <web-app>
-
 	<listener>
 		<listener-class>
 			com.sun.xml.ws.transport.http.servlet.WSServletContextListener
@@ -26,15 +25,14 @@ Inc.//DTD Web Application 2.3//EN"
 	</session-config>
     
 	<resource-ref>	
-		<res-ref-name>jdbc/DefaultDB</res-ref-name>
+		<res-ref-name>S0014062182</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
 		<res-auth></res-auth>
 		<res-sharing-scope></res-sharing-scope>
 	</resource-ref>
 	
 	<!-- Secure application -->
-
-	<security-constraint>
+	<!-- <security-constraint>
 		<web-resource-collection>
 			<web-resource-name>Protected Area</web-resource-name>
 			<url-pattern>/AddUpdateTables</url-pattern>
@@ -50,5 +48,5 @@ Inc.//DTD Web Application 2.3//EN"
     <security-role>
         <description>All SAP HANA Cloud Platform users</description>
         <role-name>Everyone</role-name>
-    </security-role> 
+    </security-role> -->
 </web-app>

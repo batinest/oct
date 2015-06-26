@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
-@Table(name="Z_SAPTRX_EH_EVMSG")
+@Table(name="nestle.dev.glb.sc.data.table::OCEANTRACKER.Saptrx_eh_evmsg")
 @NamedQuery(name="SaptrxEhEvmsg.findAll", query="SELECT s FROM SaptrxEhEvmsg s")
 public class SaptrxEhEvmsg implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -94,6 +94,7 @@ public class SaptrxEhEvmsg implements Serializable {
 	@Column(name="SEQ_NBR")
 	private int seqNbr;
 
+	@Transient
 	private String addUpdateFlag;
 	
 	public SaptrxEhEvmsg() {

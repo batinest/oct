@@ -195,6 +195,7 @@ public class SaptrxEvmLid implements Serializable {
 	@Column(name="TZDESC")
 	private String tzdesc;
 	
+	@Transient
 	private String addUpdateFlag;
 
 	public SaptrxEvmLid() {
